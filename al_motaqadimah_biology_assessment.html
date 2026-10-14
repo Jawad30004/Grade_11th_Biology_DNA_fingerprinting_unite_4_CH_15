@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Biology Assessment - Al-Motaqadimah International School</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                        },
+                        emerald: {
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        ivory: '#fcfbf9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Subtle DNA Double Helix Background Pattern */
+        .dna-pattern {
+            background-image: radial-gradient(#059669 0.75px, transparent 0.75px), radial-gradient(#1e3a8a 0.75px, #fcfbf9 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.03;
+        }
+        .dark .dna-pattern {
+            background-image: radial-gradient(#10b981 0.75px, transparent 0.75px), radial-gradient(#3b82f6 0.75px, #0f172a 0.75px);
+            opacity: 0.05;
+        }
+        @media print {
+            body { background: white !important; color: black !important; }
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            .page-break { page-break-after: always; }
+        }
+    </style>
+</head>
+<body class="bg-ivory dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col relative transition-colors duration-300">
+
+    <!-- Background DNA Pattern Overlay -->
+    <div class="absolute inset-0 dna-pattern pointer-events-none fixed z-0"></div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-800/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="image_5a1a17.jpg" alt="Al-Motaqadimah International School Logo" class="h-14 w-14 object-contain rounded-full border border-emerald-600/30 shadow-sm bg-white p-0.5" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AMIS'">
+                <div>
+                    <h1 class="text-base sm:text-lg font-bold text-navy-900 dark:text-white leading-tight">Al-Motaqadimah International School</h1>
+                    <p class="text-xs sm:text-sm text-emerald-700 dark:text-emerald-400 font-medium">Grade 11 Biology | Unit 4, Chapter 15, Lesson 2</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="hidden md:block text-right">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 block">Instructor</span>
+                    <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Biology Teacher: JAWAD Ali</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors shadow-sm" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fas fa-moon text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow z-10 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+
+        <!-- 1. WELCOME & REGISTRATION SCREEN -->
+        <div id="welcome-screen" class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-6 sm:p-10 transition-all">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <img src="image_5a1a17.jpg" alt="Logo" class="h-24 w-24 object-contain mx-auto mb-4 rounded-full border-2 border-emerald-600 shadow-md bg-white p-1" onerror="this.src='https://placehold.co/150x150/1e3a8a/ffffff?text=AMIS'">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white mb-2">Grade 11 Biology Assessment</h2>
+                <p class="text-emerald-700 dark:text-emerald-400 font-semibold text-sm sm:text-base mb-6">Unit 4: Inheritance and Genetics &bull; Chapter 15: Genetic Engineering &bull; Lesson 2: Applications and Impacts of Biotechnology</p>
+                
+                <div class="bg-emerald-50 dark:bg-slate-700/50 border border-emerald-200 dark:border-emerald-600/30 rounded-xl p-5 text-left text-sm sm:text-base text-slate-700 dark:text-slate-200 space-y-2 mb-8 shadow-inner">
+                    <p class="font-semibold text-navy-900 dark:text-white mb-2"><i class="fas fa-info-circle text-emerald-600 mr-2"></i>Welcome Message:</p>
+                    <p>Welcome to Your Grade 11 Biology Assessment!</p>
+                    <p>Unit 4: Inheritance and Genetics</p>
+                    <p>Chapter 15: Genetic Engineering</p>
+                    <p>Lesson 2: Applications and Impacts of Biotechnology</p>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">Read each question carefully, select the best answer, and review your responses before submitting.</p>
+                    <p class="font-medium text-emerald-800 dark:text-emerald-400 mt-2">Best of luck!<br>Biology Teacher: JAWAD Ali</p>
+                </div>
+            </div>
+
+            <form id="registration-form" onsubmit="startQuiz(event)" class="max-w-md mx-auto space-y-5 bg-slate-50 dark:bg-slate-900/50 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <div>
+                    <label for="student-name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                        Full Name <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="student-name" required placeholder="Enter your full name" 
+                        class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all font-medium">
+                    <p id="name-error" class="text-red-500 text-xs mt-1 hidden">Please enter your full name to begin the assessment.</p>
+                </div>
+
+                <div>
+                    <label for="roll-number" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                        Roll Number <span class="text-slate-400 text-xs font-normal">(Optional)</span>
+                    </label>
+                    <input type="text" id="roll-number" placeholder="e.g., 11042" 
+                        class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all font-medium">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2">
+                        <span>Start Quiz Assessment</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 2. QUIZ INTERFACE SCREEN -->
+        <div id="quiz-screen" class="hidden space-y-6">
+            <!-- Quiz Top Bar: Timer, Progress & Info -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 px-3.5 py-1.5 rounded-full text-sm font-bold shadow-inner">
+                        <span id="current-q-badge">Question 1 of 10</span>
+                    </div>
+                    <div class="text-sm font-medium text-slate-600 dark:text-slate-300">
+                        Student: <span id="display-student-name" class="font-bold text-navy-900 dark:text-white"></span>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <div id="timer-box" class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-700 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-600 font-mono font-bold text-slate-800 dark:text-slate-100">
+                        <i class="fas fa-clock text-emerald-600"></i>
+                        <span id="time-remaining">10:00</span>
+                    </div>
+                    <button onclick="flagCurrentQuestion()" id="flag-btn" class="px-4 py-2 rounded-xl border border-amber-500 text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/20 text-sm font-semibold transition-colors flex items-center space-x-1.5">
+                        <i class="far fa-flag"></i>
+                        <span id="flag-text">Flag for Review</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden shadow-inner">
+                <div id="quiz-progress-bar" class="bg-emerald-600 h-full transition-all duration-300" style="width: 10%;"></div>
+            </div>
+
+            <!-- Main Question Card -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-6 sm:p-10 transition-all">
+                <!-- Scenario (if any) -->
+                <div id="scenario-container" class="mb-6 p-4 rounded-xl bg-sky-50 dark:bg-slate-700/40 border-l-4 border-navy-800 dark:border-emerald-500 text-slate-700 dark:text-slate-200 text-sm sm:text-base leading-relaxed hidden">
+                    <p class="font-bold text-navy-900 dark:text-white mb-1"><i class="fas fa-flask mr-2 text-navy-800 dark:text-emerald-400"></i>Scenario:</p>
+                    <p id="scenario-text"></p>
+                </div>
+
+                <!-- Question Statement -->
+                <h3 id="question-statement" class="text-lg sm:text-xl font-bold text-navy-900 dark:text-white mb-6 leading-snug">
+                    Question statement goes here...
+                </h3>
+
+                <!-- Options List -->
+                <div id="options-container" class="space-y-3.5 mb-8">
+                    <!-- Options populated via JS -->
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-700">
+                    <button onclick="prevQuestion()" id="prev-btn" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors flex items-center space-x-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Previous</span>
+                    </button>
+
+                    <div class="flex space-x-3">
+                        <button onclick="nextQuestion()" id="next-btn" class="px-6 py-2.5 bg-navy-900 hover:bg-navy-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition-all flex items-center space-x-2">
+                            <span>Next</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button onclick="confirmSubmitDialog()" id="submit-btn" class="hidden px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Submit Quiz</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Navigator Grid -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 p-6">
+                <h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center justify-between">
+                    <span>Question Navigator</span>
+                    <span class="text-xs font-normal text-slate-500">Click any box to jump directly</span>
+                </h4>
+                <div id="navigator-grid" class="grid grid-cols-5 sm:grid-cols-10 gap-2.5">
+                    <!-- Generated via JS -->
+                </div>
+                <div class="flex flex-wrap items-center gap-4 mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-400">
+                    <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-full bg-emerald-600 inline-block"></span><span>Answered</span></div>
+                    <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-400 inline-block"></span><span>Unanswered</span></div>
+                    <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span><span>Flagged</span></div>
+                    <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-full bg-navy-900 dark:bg-emerald-400 inline-block"></span><span>Current</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SUBMISSION CONFIRMATION MODAL -->
+        <div id="submit-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4">
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 max-w-md w-full p-6 sm:p-8 transform transition-all scale-100">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-1">Ready to Submit Quiz?</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Please review your quiz status before final submission.</p>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-4 mb-6 space-y-2 text-sm">
+                    <div class="flex justify-between font-medium">
+                        <span class="text-slate-600 dark:text-slate-400">Total Questions:</span>
+                        <span class="text-slate-800 dark:text-slate-200">10</span>
+                    </div>
+                    <div class="flex justify-between font-medium">
+                        <span class="text-emerald-600 dark:text-emerald-400">Answered Questions:</span>
+                        <span id="modal-answered-count" class="font-bold text-emerald-600 dark:text-emerald-400">0</span>
+                    </div>
+                    <div class="flex justify-between font-medium">
+                        <span class="text-amber-600 dark:text-amber-400">Unanswered Questions:</span>
+                        <span id="modal-unanswered-count" class="font-bold text-amber-600 dark:text-amber-400">0</span>
+                    </div>
+                </div>
+
+                <div class="flex space-x-3">
+                    <button onclick="closeSubmitDialog()" class="flex-1 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold rounded-xl transition-colors">
+                        Return to Quiz
+                    </button>
+                    <button onclick="finalizeSubmission()" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-all">
+                        Confirm & Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. RESULTS DASHBOARD SCREEN -->
+        <div id="results-screen" class="hidden space-y-8">
+            <!-- Top Summary Header -->
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700 p-6 sm:p-10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-700">
+                    <div class="flex items-center space-x-4">
+                        <img src="image_5a1a17.jpg" alt="Logo" class="h-20 w-20 object-contain rounded-full border-2 border-emerald-600 bg-white p-1 shadow-md" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AMIS'">
+                        <div>
+                            <h2 class="text-2xl font-extrabold text-navy-900 dark:text-white">Assessment Results Dashboard</h2>
+                            <p class="text-emerald-700 dark:text-emerald-400 font-semibold text-sm">Al-Motaqadimah International School &bull; Biology Teacher: JAWAD Ali</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Unit 4: Inheritance & Genetics &bull; Chapter 15: Genetic Engineering &bull; Lesson 2</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button onclick="downloadStudentResultPDF()" class="px-5 py-2.5 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-center space-x-2 text-sm">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Student Result PDF</span>
+                        </button>
+                        <button onclick="downloadFullReviewPDF()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-center space-x-2 text-sm">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Download Full Review PDF</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Student & Score Overview Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                    <!-- Student Info Card -->
+                    <div class="bg-slate-50 dark:bg-slate-900/50 rounded-2xl p-5 border border-slate-200 dark:border-slate-700">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Student Particulars</h4>
+                        <p class="text-lg font-bold text-navy-900 dark:text-white mb-1" id="res-student-name">Student Name</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">Roll Number: <span id="res-roll-number" class="font-semibold">N/A</span></p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Time Taken: <span id="res-time-taken" class="font-medium">0 mins</span></p>
+                    </div>
+
+                    <!-- Score Card -->
+                    <div class="bg-emerald-50 dark:bg-emerald-950/30 rounded-2xl p-5 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-1">Final Score</h4>
+                            <div class="text-4xl font-extrabold text-navy-900 dark:text-white">
+                                <span id="res-score">0</span><span class="text-2xl text-slate-400 font-normal"> / 10</span>
+                            </div>
+                            <p id="performance-badge" class="mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm">Excellent</p>
+                        </div>
+                        <div class="relative w-24 h-24 flex items-center justify-center">
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-slate-200 dark:text-slate-700" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                <path id="score-circle-path" class="text-emerald-600 transition-all duration-1000" stroke-dasharray="0, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            </svg>
+                            <div class="absolute text-sm font-extrabold text-navy-900 dark:text-white" id="res-percentage">0%</div>
+                        </div>
+                    </div>
+
+                    <!-- Breakdown Statistics -->
+                    <div class="bg-slate-50 dark:bg-slate-900/50 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Response Breakdown</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between items-center">
+                                <span class="flex items-center space-x-2"><span class="w-3 h-3 rounded-full bg-emerald-600 inline-block"></span><span class="text-slate-600 dark:text-slate-300">Correct Answers:</span></span>
+                                <span id="res-correct" class="font-bold text-emerald-600">0</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="flex items-center space-x-2"><span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span><span class="text-slate-600 dark:text-slate-300">Incorrect Answers:</span></span>
+                                <span id="res-incorrect" class="font-bold text-red-500">0</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="flex items-center space-x-2"><span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span><span class="text-slate-600 dark:text-slate-300">Unattempted:</span></span>
+                                <span id="res-unattempted" class="font-bold text-amber-500">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answer Review Section Header -->
+            <div class="flex items-center justify-between pt-4">
+                <div>
+                    <h3 class="text-xl font-bold text-navy-900 dark:text-white">Detailed Answer Review & Scientific Explanations</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Examine correct solutions, your responses, and expert explanations for every question.</p>
+                </div>
+                <button onclick="retakeQuiz()" class="px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl text-sm transition-colors flex items-center space-x-2">
+                    <i class="fas fa-redo"></i>
+                    <span>Retake Assessment</span>
+                </button>
+            </div>
+
+            <!-- Answer Review List Container -->
+            <div id="review-list-container" class="space-y-6">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 py-6 text-center text-xs text-slate-500 dark:text-slate-400 z-10 transition-colors">
+        <p>&copy; 2026 Al-Motaqadimah International School. All rights reserved.</p>
+        <p class="mt-1">Grade 11 Biology Assessment &bull; Lesson 2: Applications and Impacts of Biotechnology</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Exact 10 MCQs provided in the prompt
+        const quizData = [
+            {
+                id: 1,
+                scenario: "A forensic team investigates a break-in and collects blood, saliva, and hair roots from the crime scene.",
+                question: "Which of the following items recovered from the same location would not be considered a valid biological sample for extracting DNA profiles?",
+                options: [
+                    "Semen stain",
+                    "Bone fragment",
+                    "An inorganic, sterile plastic pen casing with no cellular residue",
+                    "Urine cells"
+                ],
+                correctAnswer: 2, // Index C
+                explanation: "Semen, bone fragments, and urine cells all contain nuclear DNA or cellular material. An inorganic, sterile plastic pen casing with no cellular residue contains no DNA for profiling."
+            },
+            {
+                id: 2,
+                scenario: null,
+                question: "Why is the method named \"DNA fingerprinting\"?",
+                options: [
+                    "Because DNA is physically visible on human fingers",
+                    "Because, like traditional fingerprints, unique DNA profiles help identify individuals",
+                    "Because fingerprints are used to synthesize artificial DNA strands",
+                    "Because DNA can only be collected from fingertips"
+                ],
+                correctAnswer: 1, // Index B
+                explanation: "DNA fingerprinting is named analogously to traditional fingerprinting because every individual (except identical twins) has a unique DNA profile, much like unique friction ridge patterns on fingers."
+            },
+            {
+                id: 3,
+                scenario: null,
+                question: "What inherent electrical charge does a DNA molecule carry, and how does it behave in an electric field?",
+                options: [
+                    "Positive charge, causing it to move toward the negative electrode",
+                    "Neutral charge, requiring chemical ionization to move",
+                    "Negative charge, which is crucial for movement during separation methods",
+                    "Alternating charge depending on the surrounding temperature"
+                ],
+                correctAnswer: 2, // Index C
+                explanation: "DNA molecules possess a negative electrical charge due to the phosphate backbone, causing them to migrate toward the positive electrode (anode) in gel electrophoresis."
+            },
+            {
+                id: 4,
+                scenario: "While analyzing the structural backbone of nucleic acids, a researcher identifies the specific type of carbohydrate present in the nucleotide monomer.",
+                question: "What category of sugar is found in a nucleotide structure?",
+                options: [
+                    "Hexose sugar",
+                    "Pentose sugar",
+                    "Triose sugar",
+                    "Disaccharide"
+                ],
+                correctAnswer: 1, // Index B
+                explanation: "Nucleotides contain a 5-carbon pentose sugar (deoxyribose in DNA or ribose in RNA), distinguishing them from hexose (like glucose) or triose sugars."
+            },
+            {
+                id: 5,
+                scenario: "A molecular genetics student is synthesizing a complementary strand for a DNA fragment with the sequence ATGCCA.",
+                question: "Based on standard base-pairing rules, what is the exact complementary sequence?",
+                options: [
+                    "TACGGT",
+                    "ATGCCT",
+                    "CGATCG",
+                    "TACCCA"
+                ],
+                correctAnswer: 0, // Index A
+                explanation: "According to Watson-Crick base pairing rules, Adenine (A) pairs with Thymine (T), and Cytosine (C) pairs with Guanine (G). Thus, ATGCCA complements to TACGGT."
+            },
+            {
+                id: 6,
+                scenario: null,
+                question: "Why do forensic scientists collect biological samples such as bone, teeth, and skin cells from a crime scene?",
+                options: [
+                    "To test for poison",
+                    "Each sample carries DNA that can be used to identify a person",
+                    "To measure the bone density of the victim",
+                    "To analyze blood type proteins"
+                ],
+                correctAnswer: 1, // Index B
+                explanation: "Hard biological tissues such as bones, teeth, and skin cells protect nuclear and mitochondrial DNA from degradation, providing reliable genetic material for identification."
+            },
+            {
+                id: 7,
+                scenario: "A student is reviewing terms related to DNA analysis methods to prepare for an exam.",
+                question: "Which of the following is not an alternative name for DNA fingerprinting?",
+                options: [
+                    "DNA profiling",
+                    "Genetic fingerprinting",
+                    "Protein transcription mapping",
+                    "DNA typing"
+                ],
+                correctAnswer: 2, // Index C
+                explanation: "DNA fingerprinting is also known as DNA profiling, genetic fingerprinting, or DNA typing. Protein transcription mapping is a method for studying gene expression, not an alternative name for DNA fingerprinting."
+            },
+            {
+                id: 8,
+                scenario: null,
+                question: "What electrical charge does a DNA molecule possess?",
+                options: [
+                    "Positive charge",
+                    "Neutral charge",
+                    "Negative charge",
+                    "Alternating charge"
+                ],
+                correctAnswer: 2, // Index C
+                explanation: "The phosphate groups in the nucleic acid backbone carry negatively charged oxygen atoms, giving DNA a net negative electrical charge."
+            },
+            {
+                id: 9,
+                scenario: null,
+                question: "Which three main components make up a nucleotide as shown in the presentation?",
+                options: [
+                    "Amino acid, carboxyl group, and R-group",
+                    "Phosphate group, pentose sugar, and nitrogenous base",
+                    "Glycerol, fatty acid, and phosphate",
+                    "Glucose, nitrogen, and base"
+                ],
+                correctAnswer: 1, // Index B
+                explanation: "A nucleotide monomer consists of three core components: a phosphate group, a pentose sugar (ribose or deoxyribose), and a nitrogenous base (adenine, thymine, cytosine, guanine, or uracil)."
+            },
+            {
+                id: 10,
+                scenario: "A biochemistry student inspects the chemical attachments within a single nucleotide diagram.",
+                question: "Where is the nitrogenous base directly attached within the nucleotide structure?",
+                options: [
+                    "Directly to the phosphate group",
+                    "To the pentose sugar component",
+                    "To the outer hydrogen bond network",
+                    "To the terminal 5' hydroxyl group only"
+                ],
+                correctAnswer: 1, // Index B
+                explanation: "In a nucleotide structure, the nitrogenous base is covalently attached to the 1' carbon of the pentose sugar component via an N-glycosidic bond."
+            }
+        ];
+
+        // State variables
+        let currentQuestionIndex = 0;
+        let studentAnswers = new Array(quizData.length).fill(null);
+        let flaggedQuestions = new Array(quizData.length).fill(false);
+        let studentName = "";
+        let rollNumber = "";
+        let timerInterval = null;
+        let timeLeft = 600; // 10 minutes in seconds
+        let startTime = null;
+        let endTime = null;
+
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.className = 'fas fa-moon text-lg';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                icon.className = 'fas fa-sun text-lg text-amber-400';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize Theme from storage
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').className = 'fas fa-sun text-lg text-amber-400';
+        }
+
+        // Start Quiz
+        function startQuiz(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('student-name');
+            const nameError = document.getElementById('name-error');
+            
+            if (!nameInput.value.trim()) {
+                nameError.classList.remove('hidden');
+                nameInput.focus();
+                return;
+            }
+            nameError.classList.add('hidden');
+
+            studentName = nameInput.value.trim();
+            rollNumber = document.getElementById('roll-number').value.trim() || 'N/A';
+
+            document.getElementById('display-student-name').textContent = studentName;
+
+            // Switch screens
+            document.getElementById('welcome-screen').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+
+            // Start timer
+            startTime = new Date();
+            startTimer();
+
+            // Render first question & navigator
+            renderQuestion();
+            renderNavigator();
+        }
+
+        // Timer function
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('time-remaining').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                if (timeLeft <= 60) {
+                    document.getElementById('timer-box').classList.add('bg-red-100', 'dark:bg-red-950/50', 'text-red-600', 'animate-pulse');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    autoSubmitQuiz();
+                }
+            }, 1000);
+        }
+
+        // Render Question
+        function renderQuestion() {
+            const q = quizData[currentQuestionIndex];
+            
+            // Update badge & progress
+            document.getElementById('current-q-badge').textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+            const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${progressPercent}%`;
+
+            // Scenario
+            const scenarioContainer = document.getElementById('scenario-container');
+            const scenarioText = document.getElementById('scenario-text');
+            if (q.scenario) {
+                scenarioText.textContent = q.scenario;
+                scenarioContainer.classList.remove('hidden');
+            } else {
+                scenarioContainer.classList.add('hidden');
+            }
+
+            // Question Statement
+            document.getElementById('question-statement').textContent = q.question;
+
+            // Options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            const optionLetters = ['A', 'B', 'C', 'D'];
+            q.options.forEach((opt, idx) => {
+                const isSelected = studentAnswers[currentQuestionIndex] === idx;
+                const optDiv = document.createElement('div');
+                optDiv.className = `p-4 rounded-xl border-2 transition-all cursor-pointer flex items-start space-x-3.5 ${
+                    isSelected 
+                        ? 'border-emerald-600 bg-emerald-50/70 dark:bg-emerald-950/40 text-navy-900 dark:text-white shadow-sm' 
+                        : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-slate-300 dark:hover:border-slate-600 text-slate-700 dark:text-slate-200'
+                }`;
+                optDiv.onclick = () => selectOption(idx);
+
+                optDiv.innerHTML = `
+                    <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm ${
+                        isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
+                    }">
+                        ${optionLetters[idx]}
+                    </div>
+                    <div class="flex-grow pt-1 text-sm sm:text-base font-medium">
+                        ${opt}
+                    </div>
+                `;
+                optionsContainer.appendChild(optDiv);
+            });
+
+            // Navigation button states
+            document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+
+            if (currentQuestionIndex === quizData.length - 1) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+
+            // Flag button state
+            updateFlagButtonState();
+            renderNavigator();
+        }
+
+        // Select Option
+        function selectOption(optionIndex) {
+            studentAnswers[currentQuestionIndex] = optionIndex;
+            renderQuestion();
+        }
+
+        // Navigation controls
+        function nextQuestion() {
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        function goToQuestion(index) {
+            currentQuestionIndex = index;
+            renderQuestion();
+        }
+
+        // Flag question
+        function flagCurrentQuestion() {
+            flaggedQuestions[currentQuestionIndex] = !flaggedQuestions[currentQuestionIndex];
+            updateFlagButtonState();
+            renderNavigator();
+        }
+
+        function updateFlagButtonState() {
+            const flagBtn = document.getElementById('flag-btn');
+            const flagText = document.getElementById('flag-text');
+            if (flaggedQuestions[currentQuestionIndex]) {
+                flagBtn.className = 'px-4 py-2 rounded-xl border border-amber-500 bg-amber-500 text-white text-sm font-semibold transition-colors flex items-center space-x-1.5 shadow-sm';
+                flagText.textContent = 'Unflag Question';
+            } else {
+                flagBtn.className = 'px-4 py-2 rounded-xl border border-amber-500 text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/20 text-sm font-semibold transition-colors flex items-center space-x-1.5';
+                flagText.textContent = 'Flag for Review';
+            }
+        }
+
+        // Render Navigator Grid
+        function renderNavigator() {
+            const grid = document.getElementById('navigator-grid');
+            grid.innerHTML = '';
+
+            quizData.forEach((_, idx) => {
+                const isAnswered = studentAnswers[idx] !== null;
+                const isFlagged = flaggedQuestions[idx];
+                const isCurrent = currentQuestionIndex === idx;
+
+                let bgClass = 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-600';
+                if (isAnswered) {
+                    bgClass = 'bg-emerald-600 text-white border-emerald-600';
+                }
+                if (isFlagged) {
+                    bgClass = 'bg-amber-500 text-white border-amber-500';
+                }
+                if (isCurrent) {
+                    bgClass += ' ring-2 ring-navy-900 dark:ring-emerald-400 font-bold shadow-md';
+                }
+
+                const btn = document.createElement('button');
+                btn.className = `h-10 rounded-xl border flex items-center justify-center font-semibold text-sm transition-transform active:scale-95 ${bgClass}`;
+                btn.textContent = idx + 1;
+                btn.onclick = () => goToQuestion(idx);
+                grid.appendChild(btn);
+            });
+        }
+
+        // Submit Dialog Confirmation
+        function confirmSubmitDialog() {
+            const answeredCount = studentAnswers.filter(ans => ans !== null).length;
+            const unansweredCount = quizData.length - answeredCount;
+
+            document.getElementById('modal-answered-count').textContent = answeredCount;
+            document.getElementById('modal-unanswered-count').textContent = unansweredCount;
+            document.getElementById('submit-modal').classList.remove('hidden');
+        }
+
+        function closeSubmitDialog() {
+            document.getElementById('submit-modal').classList.add('hidden');
+        }
+
+        function autoSubmitQuiz() {
+            closeSubmitDialog();
+            finalizeSubmission();
+        }
+
+        // Finalize Submission
+        function finalizeSubmission() {
+            closeSubmitDialog();
+            clearInterval(timerInterval);
+            endTime = new Date();
+
+            document.getElementById('quiz-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+
+            calculateAndDisplayResults();
+            renderAnswerReview();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Calculate Results
+        function calculateAndDisplayResults() {
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unattemptedCount = 0;
+
+            quizData.forEach((q, idx) => {
+                const ans = studentAnswers[idx];
+                if (ans === null) {
+                    unattemptedCount++;
+                } else if (ans === q.correctAnswer) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+            });
+
+            const percentage = (correctCount / quizData.length) * 100;
+            const timeTakenSecs = Math.floor((endTime - startTime) / 1000);
+            const mins = Math.floor(timeTakenSecs / 60);
+            const secs = timeTakenSecs % 60;
+
+            // Populate dashboard
+            document.getElementById('res-student-name').textContent = studentName;
+            document.getElementById('res-roll-number').textContent = rollNumber;
+            document.getElementById('res-time-taken').textContent = `${mins} min ${secs} sec`;
+            document.getElementById('res-score').textContent = correctCount;
+            document.getElementById('res-percentage').textContent = `${percentage}%`;
+            document.getElementById('res-correct').textContent = correctCount;
+            document.getElementById('res-incorrect').textContent = incorrectCount;
+            document.getElementById('res-unattempted').textContent = unattemptedCount;
+
+            // Circle progress path
+            const circlePath = document.getElementById('score-circle-path');
+            circlePath.setAttribute('stroke-dasharray', `${percentage}, 100`);
+
+            // Performance Badge
+            const badge = document.getElementById('performance-badge');
+            if (percentage >= 90) {
+                badge.textContent = "Exceptional (A*)";
+                badge.className = "mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm";
+            } else if (percentage >= 80) {
+                badge.textContent = "Excellent (A)";
+                badge.className = "mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-teal-600 text-white shadow-sm";
+            } else if (percentage >= 70) {
+                badge.textContent = "Proficient (B)";
+                badge.className = "mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white shadow-sm";
+            } else if (percentage >= 60) {
+                badge.textContent = "Satisfactory (C)";
+                badge.className = "mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white shadow-sm";
+            } else {
+                badge.textContent = "Needs Improvement";
+                badge.className = "mt-2 inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white shadow-sm";
+            }
+        }
+
+        // Render Answer Review List
+        function renderAnswerReview() {
+            const container = document.getElementById('review-list-container');
+            container.innerHTML = '';
+
+            const optionLetters = ['A', 'B', 'C', 'D'];
+
+            quizData.forEach((q, idx) => {
+                const studentAns = studentAnswers[idx];
+                const isCorrect = studentAns === q.correctAnswer;
+                const isUnattempted = studentAns === null;
+
+                let statusBadge = '';
+                if (isUnattempted) {
+                    statusBadge = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-400">Unattempted (0 Marks)</span>';
+                } else if (isCorrect) {
+                    statusBadge = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-400">Correct (+1 Mark)</span>';
+                } else {
+                    statusBadge = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-950/50 dark:text-red-400">Incorrect (0 Marks)</span>';
+                }
+
+                const card = document.createElement('div');
+                card.className = 'bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 p-6 sm:p-8 space-y-4';
+
+                let optionsHTML = '';
+                q.options.forEach((opt, optIdx) => {
+                    let optStyle = 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/40 text-slate-700 dark:text-slate-300';
+                    let markerIcon = '';
+
+                    if (optIdx === q.correctAnswer) {
+                        optStyle = 'border-emerald-500 bg-emerald-50/80 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 font-bold';
+                        markerIcon = '<i class="fas fa-check-circle text-emerald-600 ml-auto"></i>';
+                    } else if (optIdx === studentAns && !isCorrect) {
+                        optStyle = 'border-red-500 bg-red-50/80 dark:bg-red-950/40 text-red-900 dark:text-red-200 font-bold';
+                        markerIcon = '<i class="fas fa-times-circle text-red-500 ml-auto"></i>';
+                    }
+
+                    optionsHTML += `
+                        <div class="p-3.5 rounded-xl border-2 flex items-center space-x-3 text-sm ${optStyle}">
+                            <span class="w-7 h-7 rounded-lg bg-white dark:bg-slate-800 border flex items-center justify-center font-bold flex-shrink-0">${optionLetters[optIdx]}</span>
+                            <span class="flex-grow">${opt}</span>
+                            ${markerIcon}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-4 border-b border-slate-100 dark:border-slate-700">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Question ${idx + 1} of ${quizData.length}</span>
+                        ${statusBadge}
+                    </div>
+
+                    ${q.scenario ? `<div class="p-3 rounded-lg bg-sky-50 dark:bg-slate-700/30 text-xs sm:text-sm text-slate-600 dark:text-slate-300"><strong class="text-navy-900 dark:text-white">Scenario:</strong> ${q.scenario}</div>` : ''}
+
+                    <h4 class="text-base sm:text-lg font-bold text-navy-900 dark:text-white">${q.question}</h4>
+
+                    <div class="space-y-2.5 pt-2">
+                        ${optionsHTML}
+                    </div>
+
+                    <div class="mt-4 p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-sm text-slate-700 dark:text-slate-300">
+                        <strong class="text-emerald-800 dark:text-emerald-400 font-bold flex items-center mb-1">
+                            <i class="fas fa-lightbulb mr-2"></i>Scientific Explanation:
+                        </strong>
+                        <p>${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // PDF A: Student Result Report Download (Print layout)
+        function downloadStudentResultPDF() {
+            const printContent = `
+                <div style="font-family: Arial, sans-serif; padding: 40px; color: #1e293b;">
+                    <div style="text-align: center; border-bottom: 2px solid #059669; padding-bottom: 20px; margin-bottom: 30px;">
+                        <h1 style="color: #1e3a8a; margin: 0; font-size: 24px;">Al-Motaqadimah International School</h1>
+                        <p style="color: #059669; font-weight: bold; margin: 5px 0;">Official Student Assessment Result Report</p>
+                        <p style="font-size: 14px; color: #64748b; margin: 2px 0;">Grade 11 Biology &bull; Unit 4: Inheritance & Genetics &bull; Chapter 15: Genetic Engineering &bull; Lesson 2</p>
+                        <p style="font-size: 13px; color: #475569; margin: 2px 0;">Biology Teacher: JAWAD Ali</p>
+                    </div>
+
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                        <h3 style="margin-top: 0; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 8px;">Student Particulars</h3>
+                        <table style="width: 100%; font-size: 14px;">
+                            <tr>
+                                <td style="padding: 6px 0; font-weight: bold; width: 30%;">Full Name:</td>
+                                <td style="padding: 6px 0;">${studentName}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 6px 0; font-weight: bold;">Roll Number:</td>
+                                <td style="padding: 6px 0;">${rollNumber}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 6px 0; font-weight: bold;">Assessment Date:</td>
+                                <td style="padding: 6px 0;">${new Date().toLocaleDateString()}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 6px 0; font-weight: bold;">Time Taken:</td>
+                                <td style="padding: 6px 0;">${document.getElementById('res-time-taken').textContent}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div style="background: #ecfdf5; border: 1px solid #10b981; border-radius: 8px; padding: 20px; margin-bottom: 30px; text-align: center;">
+                        <h3 style="margin: 0 0 10px 0; color: #047857; font-size: 18px;">Performance Summary</h3>
+                        <div style="font-size: 42px; font-weight: bold; color: #065f46; margin-bottom: 5px;">${document.getElementById('res-score').textContent} / 10</div>
+                        <div style="font-size: 20px; font-weight: bold; color: #059669;">Percentage: ${document.getElementById('res-percentage').textContent}</div>
+                        <p style="margin: 10px 0 0 0; font-size: 14px; font-weight: bold; color: #1e3a8a;">Status: ${document.getElementById('performance-badge').textContent}</p>
+                    </div>
+
+                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 14px;">
+                        <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+                            <th style="padding: 10px; text-align: left;">Metric</th>
+                            <th style="padding: 10px; text-align: center;">Count</th>
+                            <th style="padding: 10px; text-align: right;">Marks</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 10px; color: #059669; font-weight: bold;">Correct Answers</td>
+                            <td style="padding: 10px; text-align: center;">${document.getElementById('res-correct').textContent}</td>
+                            <td style="padding: 10px; text-align: right;">+${document.getElementById('res-correct').textContent}</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 10px; color: #ef4444; font-weight: bold;">Incorrect Answers</td>
+                            <td style="padding: 10px; text-align: center;">${document.getElementById('res-incorrect').textContent}</td>
+                            <td style="padding: 10px; text-align: right;">0</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 10px; color: #f59e0b; font-weight: bold;">Unattempted Questions</td>
+                            <td style="padding: 10px; text-align: center;">${document.getElementById('res-unattempted').textContent}</td>
+                            <td style="padding: 10px; text-align: right;">0</td>
+                        </tr>
+                    </table>
+
+                    <div style="margin-top: 50px; display: flex; justify-content: space-between; font-size: 13px; color: #64748b;">
+                        <div>Authorized Signature: _______________________</div>
+                        <div>Al-Motaqadimah International School Assessment System</div>
+                    </div>
+                </div>
+            `;
+
+            openPrintWindow(printContent, `Biology_Result_${studentName.replace(/\s+/g, '_')}.pdf`);
+        }
+
+        // PDF B: Complete Test & Explanation Report Download
+        function downloadFullReviewPDF() {
+            const optionLetters = ['A', 'B', 'C', 'D'];
+            let questionsHTML = '';
+
+            quizData.forEach((q, idx) => {
+                const studentAns = studentAnswers[idx];
+                const isCorrect = studentAns === q.correctAnswer;
+                const isUnattempted = studentAns === null;
+
+                let statusText = isUnattempted ? 'Unattempted (0/1)' : (isCorrect ? 'Correct (+1/1)' : 'Incorrect (0/1)');
+                let statusColor = isUnattempted ? '#d97706' : (isCorrect ? '#059669' : '#dc2626');
+
+                let optsList = '';
+                q.options.forEach((opt, optIdx) => {
+                    let optColor = '#334155';
+                    let weight = 'normal';
+                    if (optIdx === q.correctAnswer) {
+                        optColor = '#047857';
+                        weight = 'bold';
+                    } else if (optIdx === studentAns && !isCorrect) {
+                        optColor = '#dc2626';
+                        weight = 'bold';
+                    }
+                    optsList += `<div style="padding: 4px 0; color: ${optColor}; font-weight: ${weight}; font-size: 13px;">[${optionLetters[optIdx]}] ${opt}</div>`;
+                });
+
+                questionsHTML += `
+                    <div style="margin-bottom: 25px; page-break-inside: avoid; border-bottom: 1px solid #cbd5e1; padding-bottom: 20px;">
+                        <div style="font-weight: bold; font-size: 14px; color: #1e3a8a; margin-bottom: 4px;">Question ${idx + 1} of 10</div>
+                        ${q.scenario ? `<div style="font-style: italic; color: #475569; font-size: 13px; margin-bottom: 6px;">Scenario: ${q.scenario}</div>` : ''}
+                        <div style="font-weight: bold; font-size: 14px; color: #0f172a; margin-bottom: 8px;">${q.question}</div>
+                        <div style="margin-bottom: 8px; padding-left: 10px;">${optsList}</div>
+                        <div style="font-size: 13px; margin-bottom: 4px;"><strong>Student Answer:</strong> ${studentAns !== null ? optionLetters[studentAns] : 'None'} | <strong style="color: ${statusColor};">${statusText}</strong></div>
+                        <div style="font-size: 13px; color: #047857; margin-bottom: 4px;"><strong>Correct Answer:</strong> ${optionLetters[q.correctAnswer]}</div>
+                        <div style="background: #f0fdf4; border-left: 3px solid #059669; padding: 8px 12px; font-size: 12px; color: #1e293b; margin-top: 6px;">
+                            <strong>Scientific Explanation:</strong> ${q.explanation}
+                        </div>
+                    </div>
+                `;
+            });
+
+            const printContent = `
+                <div style="font-family: Arial, sans-serif; padding: 30px; color: #1e293b;">
+                    <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 15px; margin-bottom: 25px;">
+                        <h1 style="color: #1e3a8a; margin: 0; font-size: 22px;">Al-Motaqadimah International School</h1>
+                        <p style="color: #059669; font-weight: bold; margin: 4px 0;">Complete Test & Scientific Explanation Review Report</p>
+                        <p style="font-size: 13px; color: #64748b; margin: 2px 0;">Student: ${studentName} (Roll: ${rollNumber}) &bull; Biology Teacher: JAWAD Ali</p>
+                        <p style="font-size: 12px; color: #475569; margin: 2px 0;">Grade 11 Biology &bull; Unit 4: Inheritance & Genetics &bull; Chapter 15: Genetic Engineering &bull; Lesson 2</p>
+                    </div>
+
+                    ${questionsHTML}
+
+                    <div style="text-align: center; font-size: 12px; color: #64748b; margin-top: 30px; border-top: 1px solid #e2e8f0; paddingTop: 10px;">
+                        Al-Motaqadimah International School &bull; Confidential Assessment Report
+                    </div>
+                </div>
+            `;
+
+            openPrintWindow(printContent, `DNA_Fingerprinting_Full_Review_${studentName.replace(/\s+/g, '_')}.pdf`);
+        }
+
+        // Open print window helper
+        function openPrintWindow(htmlContent, filename) {
+            const printWin = window.open('', '_blank');
+            printWin.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>${filename}</title>
+                    <style>
+                        body { margin: 0; padding: 0; background: white; }
+                        @media print {
+                            body { -webkit-print-color-adjust: exact; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    ${htmlContent}
+                    <script>
+                        window.onload = function() {
+                            window.print();
+                        };
+                    <\/script>
+                </body>
+                </html>
+            `);
+            printWin.document.close();
+        }
+
+        // Retake Quiz
+        function retakeQuiz() {
+            if (confirm("Are you sure you want to retake the quiz? Your previous answers will be cleared.")) {
+                currentQuestionIndex = 0;
+                studentAnswers = new Array(quizData.length).fill(null);
+                flaggedQuestions = new Array(quizData.length).fill(false);
+                timeLeft = 600;
+                
+                document.getElementById('results-screen').classList.add('hidden');
+                document.getElementById('welcome-screen').classList.remove('hidden');
+                document.getElementById('student-name').value = '';
+                document.getElementById('roll-number').value = '';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
